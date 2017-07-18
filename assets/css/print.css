@@ -1,0 +1,16 @@
+@media print {
+  body {
+    background: none;
+    color: black !important;
+    font-size: 70%;
+    margin: 0; padding: 0;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .no-print {
+    display: none;
+  }
+}

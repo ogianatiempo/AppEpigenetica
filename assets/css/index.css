@@ -1,0 +1,30 @@
+body {
+  padding-top: 70px;
+}
+
+.section {
+  width: 100%;
+  padding: 20px;
+}
+
+.bg-grey {
+  background-color: #eee;
+  color: #000;
+}
+
+.bg-white {
+  background-color: #fff;
+  color: #000;
+}
+
+
+/****************************************
+ * Box
+ ***************************************/
+.box {
+    box-shadow: 3px 4px 15px -6px #000;
+    padding: 20px 25px;
+    position: relative;
+    margin: 0 2px;
+    border-radius: 5px;
+}

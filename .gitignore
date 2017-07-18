@@ -1,6 +1,9 @@
 # Videos
 assets/videos
 
+# PDF
+*.pdf
+
 # Logs
 logs
 *.log

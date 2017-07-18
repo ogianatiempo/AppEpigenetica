@@ -21,7 +21,3 @@ window.addEventListener('keydown', function (e) {
 $("#btn-print").click(function(){
   save()
 })
-
-$(document).ready(function(){
-  $("body").append("<p>Hola</p>");
-})

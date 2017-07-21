@@ -6,4 +6,5 @@ electron.app.on('ready', function () {
     icon: __dirname + '/assets/icons/png/64x64.png'
  })
  mainWindow.loadURL('file://' + __dirname + '/index.html')
+ mainWindow.maximize()
 })

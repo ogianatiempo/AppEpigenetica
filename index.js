@@ -17,7 +17,6 @@ function save_pdf () {
  })
 }
 
-
 // Event listeners
 window.addEventListener('keydown', function (e) {
   if (e.keyCode == 80) {

@@ -22,21 +22,10 @@
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a href="#home">Home</a></li>
-          <li><a href="#seccion1">Seccion 1</a></li>
-          <li><a href="#seccion2">Seccion 2</a></li>
-          <li><a href="#seccion3">Seccion 3</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
+          <li><a href="#seccion1">Paper</a></li>
+          <li><a href="#seccion2">Videos</a></li>
+          <li><a href="#seccion3">Preguntas</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#ayudaModal">Ayuda</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
@@ -50,6 +39,19 @@
       <p class="no-print">Luego de esa explicación sigue esto</p>
     </div>
   </div> <!-- /container -->
+
+  <!-- Introducción: sólo en print -->
+  <div class="section bg-primary only-print">
+    <div class="container">
+      <div class="row box bg-white">
+        <div class="col-sm-12">
+          <h2>Introducción</h2>
+          <p>Este párrafo se imprime</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- Seccion uno -->
   <div class="section bg-primary" id="seccion1">
@@ -116,6 +118,25 @@
       </div>
     </div>
   </div>
+
+  <!-- modal de ayuda -->
+  <div class="modal fade" id="ayudaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Ayuda</h4>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- scripts -->
   <script type="text/javascript" src="index.js"></script>
 </body>

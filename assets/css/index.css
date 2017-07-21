@@ -17,6 +17,9 @@ body {
   color: #000;
 }
 
+.only-print {
+  display: none;
+}
 
 /****************************************
  * Box

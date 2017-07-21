@@ -2,10 +2,16 @@
   .no-print {
     display: none;
   }
+
+  .only-print {
+    display: inherit;
+  }
+
   .jumbotron {
     padding: 0;
     margin: 0;
   }
+
   body {
     padding-top: 0;
   }

@@ -1,6 +1,9 @@
 # Videos
 assets/videos
 
+# Realease Builds
+release-builds
+
 # PDF
 *.pdf
 

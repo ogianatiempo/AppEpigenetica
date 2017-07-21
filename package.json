@@ -1,6 +1,7 @@
 {
   "name": "app_epigenetica",
   "version": "0.0.1",
+  "productName": "App Epigenética",
   "description": "App para el taller de epigenética del laboratorio",
   "main": "app.js",
   "scripts": {
@@ -10,6 +11,15 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "electron": "^1.6.11",
+    "electron-storage": "^1.0.7",
     "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "electron-packager": "^8.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ogianatiempo/AppEpigenetica.git"
   }
 }

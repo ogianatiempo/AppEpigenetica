@@ -2,6 +2,10 @@ body {
   padding-top: 70px;
 }
 
+.jumbotron {
+  box-shadow: 3px 4px 15px -6px #000;
+}
+
 .section {
   width: 100%;
   padding: 20px;

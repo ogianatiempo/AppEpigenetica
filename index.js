@@ -5,6 +5,12 @@ const storage = require('electron-storage');
 window.$ = window.jQuery = require('jquery')
 require('bootstrap')
 
+// Smooth scroll
+$('a[href*=\\#]').on('click', function(event){
+  event.preventDefault();
+  $('html,body').animate({scrollTop:$(this.hash).offset().top}, 1000);
+});
+
 // Save functions
 function save_pdf () {
  remote.getCurrentWindow().webContents.printToPDF({

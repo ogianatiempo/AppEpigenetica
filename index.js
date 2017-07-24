@@ -1,6 +1,5 @@
 // Requirements
 var remote = require('electron').remote
-const app = require('electron').remote.app
 var fs = require('fs')
 window.$ = window.jQuery = require('jquery')
 require('bootstrap')
@@ -13,8 +12,7 @@ $('a[href*=\\#]').on('click', function(event){
 
 // Save functions
 function save_data (fileName, content) {
-  let path = app.getPath("desktop") + "/" + fileName;
-  fs.writeFile(path, content, (err) => {
+  fs.writeFile(fileName, content, (err) => {
         if(err){
             console.error("An error ocurred creating the file "+ err.message);
         };
@@ -59,8 +57,7 @@ $("#btn-print").click(function(){
 })
 
 $("#btn-save").click(function(){
-  let fileName = $("#nombre").val();
+  let fileName = $("#nombre").val()+".txt";
   let content = $("#texto").val();
-
   save_data(fileName, content);
 })

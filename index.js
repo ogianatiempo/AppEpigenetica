@@ -23,9 +23,25 @@ function save_pdf () {
  })
 }
 
+// Random video
+var videos = fs.readdirSync('assets/videos/')
+var random_video = videos[Math.floor(Math.random() * videos.length)]
+
+var video = $('<video />', {
+    id: 'video',
+    src: 'assets/videos/'+random_video,
+    type: 'video/mp4',
+    controls: true
+});
+
+$(document).ready(function() {
+  video.appendTo($('#video_div'));
+});
+
 // Event listeners
 window.addEventListener('keydown', function (e) {
   if (e.keyCode == 80) {
+
   };
 });
 

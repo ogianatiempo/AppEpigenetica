@@ -1,7 +1,7 @@
 // Requirements
 var remote = require('electron').remote
+const app = require('electron').remote.app
 var fs = require('fs')
-const storage = require('electron-storage');
 window.$ = window.jQuery = require('jquery')
 require('bootstrap')
 
@@ -12,6 +12,16 @@ $('a[href*=\\#]').on('click', function(event){
 });
 
 // Save functions
+function save_data (fileName, content) {
+  let path = app.getPath("desktop") + "/" + fileName;
+  fs.writeFile(path, content, (err) => {
+        if(err){
+            console.error("An error ocurred creating the file "+ err.message);
+        };
+        alert("The file has been succesfully saved");
+    });
+}
+
 function save_pdf () {
  remote.getCurrentWindow().webContents.printToPDF({
    portrait: false
@@ -41,7 +51,6 @@ $(document).ready(function() {
 // Event listeners
 window.addEventListener('keydown', function (e) {
   if (e.keyCode == 80) {
-
   };
 });
 
@@ -50,6 +59,8 @@ $("#btn-print").click(function(){
 })
 
 $("#btn-save").click(function(){
-  alert($("#nombre").val());
-  alert($("#texto").val())
+  let fileName = $("#nombre").val();
+  let content = $("#texto").val();
+
+  save_data(fileName, content);
 })
